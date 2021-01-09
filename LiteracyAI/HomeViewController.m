@@ -32,7 +32,7 @@
     [super viewWillDisappear:animated];
 }
 
-- (void)showLoginScreen { 
+- (void)showLoginScreen {
     UIStoryboard* storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController* loginVC = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];
     [self presentViewController:loginVC animated:YES completion:nil];

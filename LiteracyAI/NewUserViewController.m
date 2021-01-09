@@ -9,9 +9,7 @@
 #import "UserManager.h"
 
 @interface NewUserViewController ()
-{
-    NSString* _imgPath;
-}
+
 @end
 
 @implementation NewUserViewController

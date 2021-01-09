@@ -18,6 +18,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign, readonly) int userID;
 @property (nonatomic, copy, readonly) NSString* name;
 @property (nonatomic, strong, readonly) UIImage* image;
+@property (nonatomic, strong, readonly) NSString* imgPath;
 -(instancetype)initWithSQLRecord:(sqlite3_stmt*)record;
 @end
 

@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) IBOutlet UIImageView* imgView;
 @property (nonatomic, weak) IBOutlet UITextField* nameField;
 @property (nonatomic, weak) IBOutlet UIScrollView* scrollView;
+@property (nonatomic, strong) NSString* imgPath;
 - (IBAction)choosePicture:(id)sender;
 - (IBAction)done:(id)sender;
 @end

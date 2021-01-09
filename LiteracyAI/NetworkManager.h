@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+struct NeuralNet;
+
 @interface NetworkManager : NSObject
+@property (nonatomic, assign) struct NeuralNet* lettersNet;
+@property (nonatomic, assign) struct NeuralNet* numbersNet;
 +(instancetype)sharedInstance;
 -(char)evaluateLetter:(UIImage*)img;
 -(unsigned)evaluateNumber:(UIImage*)img;

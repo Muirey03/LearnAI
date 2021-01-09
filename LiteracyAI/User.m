@@ -8,9 +8,6 @@
 #import "User.h"
 
 @implementation User
-{
-    NSString* _imgPath;
-}
 
 - (instancetype)initWithSQLRecord:(sqlite3_stmt *)record {
     if ((self = [self init])) {

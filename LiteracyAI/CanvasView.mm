@@ -1,9 +1,6 @@
 #import "CanvasView.h"
 
 @implementation CanvasView
-{
-	NSMutableArray<NSMutableArray<NSValue*>*>* _lines;
-}
 
 - (void)sharedInit {
     _lines = [NSMutableArray array];

@@ -7,26 +7,15 @@
 
 #import <UIKit/UIKit.h>
 #import "NetworkManager.h"
-#include "NeuralNet.hpp"
 #include "BinaryHelper.h"
 #include "UIImage+Pixels.h"
-
-//DEBUG
-#include <iomanip>
-#include <sstream>
-#include <iostream>
-#include <string>
-#include <fstream>
+#include "NeuralNet.hpp"
 
 @interface NetworkManager ()
 - (NeuralNet*)newNetwork:(NSString*)weightsPath;
 @end
 
 @implementation NetworkManager
-{
-    NeuralNet* _lettersNet;
-    NeuralNet* _numbersNet;
-}
 
 +(NSString*)lettersWeightsPath
 {
