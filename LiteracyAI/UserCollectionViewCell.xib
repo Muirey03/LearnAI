@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17502"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserCollectionViewCell" id="Yqd-I7-AeA" customClass="UserCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="200"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="509" height="200"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="87R-2H-hTl">
+                        <rect key="frame" x="154.5" y="0.0" width="200" height="200"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-g0-O3H">
+                                <rect key="frame" x="25.5" y="10" width="149" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Awz-g0-O3H" secondAttribute="height" multiplier="1:1" id="3fR-Zj-rJ6"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CvW-QD-2B9">
+                                <rect key="frame" x="0.0" y="169" width="200" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="jKa-sq-gT0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="200" id="3xu-DQ-nUV"/>
+                            <constraint firstItem="CvW-QD-2B9" firstAttribute="bottom" secondItem="87R-2H-hTl" secondAttribute="bottom" constant="-10" id="4zP-Pg-PG6"/>
+                            <constraint firstItem="Awz-g0-O3H" firstAttribute="centerX" secondItem="87R-2H-hTl" secondAttribute="centerX" id="6kS-iB-qvl"/>
+                            <constraint firstItem="Awz-g0-O3H" firstAttribute="top" secondItem="87R-2H-hTl" secondAttribute="top" constant="10" id="DKt-CD-heH"/>
+                            <constraint firstItem="Awz-g0-O3H" firstAttribute="bottom" secondItem="CvW-QD-2B9" secondAttribute="top" constant="-10" id="Di9-Ro-mKG"/>
+                            <constraint firstItem="CvW-QD-2B9" firstAttribute="trailing" secondItem="87R-2H-hTl" secondAttribute="trailing" id="WPy-ZT-Jxv"/>
+                            <constraint firstItem="CvW-QD-2B9" firstAttribute="leading" secondItem="87R-2H-hTl" secondAttribute="leading" id="t5d-QN-azc"/>
+                            <constraint firstAttribute="width" secondItem="87R-2H-hTl" secondAttribute="height" id="w8k-Dw-3hs"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="Ox1-cK-5tf"/>
+            <constraints>
+                <constraint firstItem="87R-2H-hTl" firstAttribute="centerX" secondItem="Yqd-I7-AeA" secondAttribute="centerX" id="9Tv-NF-yMN"/>
+                <constraint firstItem="87R-2H-hTl" firstAttribute="top" secondItem="Yqd-I7-AeA" secondAttribute="top" id="X1v-j2-c0W"/>
+                <constraint firstAttribute="bottom" secondItem="87R-2H-hTl" secondAttribute="bottom" id="jbh-dl-qdE"/>
+            </constraints>
+            <size key="customSize" width="509" height="200"/>
+            <connections>
+                <outlet property="nameLbl" destination="CvW-QD-2B9" id="o7Q-sM-3ft"/>
+                <outlet property="profileImg" destination="Awz-g0-O3H" id="Kvs-we-icB"/>
+            </connections>
+            <point key="canvasLocation" x="266" y="-32"/>
+        </collectionViewCell>
+    </objects>
+</document>
