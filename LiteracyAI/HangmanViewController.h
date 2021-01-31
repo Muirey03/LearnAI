@@ -23,6 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(NSString*)hyphonatedWord:(NSString*)word;
 -(void)guessCharacter:(char)c;
 -(void)incorrectGuess:(char)c;
+- (void)wordFailed;
 -(void)wordCompleted;
 @end
 

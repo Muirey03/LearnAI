@@ -138,12 +138,31 @@
     _lives--;
     
     if (_lives == 0) {
-        IncorrectViewController* crossVC = [IncorrectViewController new];
-        crossVC.completion = ^{
-            [self chooseWord];
-        };
-        [self presentViewController:crossVC animated:NO completion:nil];
+        [self wordFailed];
     }
+}
+
+- (void)wordFailed {
+    NSMutableAttributedString* newText = [NSMutableAttributedString new];
+    for (NSUInteger i = 0; i < _guessedWord.length; i++) {
+        char c = [_guessedWord characterAtIndex:i];
+        NSDictionary* attrib = nil;
+        if (c == '_') {
+            c = [_wordToGuess characterAtIndex:i];
+            attrib = @{NSForegroundColorAttributeName : UIColor.systemRedColor};
+        }
+        [newText appendAttributedString:[[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%c", c] attributes:attrib]];
+    }
+    
+    [_chalkboard setAttributedText:newText];
+    
+    IncorrectViewController* crossVC = [IncorrectViewController new];
+    crossVC.completion = ^{
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+            [self chooseWord];
+        });
+    };
+    [self presentViewController:crossVC animated:NO completion:nil];
 }
 
 - (void)canvasDidSubmitLetter:(char)c {

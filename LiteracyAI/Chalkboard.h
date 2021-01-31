@@ -14,6 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, weak) UIView* hangmanView;
 @property (nonatomic, strong) NSMutableArray<CALayer*>* hangmanLayers;
 -(void)setText:(NSString*)text;
+-(void)setAttributedText:(NSAttributedString*)attText;
 -(void)drawHangmanStroke:(CGPathRef)path;
 -(void)resetHangman;
 @end

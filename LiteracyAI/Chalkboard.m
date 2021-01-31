@@ -46,6 +46,11 @@
 
 -(void)setText:(NSString*)text {
     NSMutableAttributedString* attText = [[NSMutableAttributedString alloc] initWithString:text];
+    [self setAttributedText:attText];
+}
+
+-(void)setAttributedText:(NSAttributedString*)text {
+    NSMutableAttributedString* attText = [text mutableCopy];
     const CGFloat charSpacing = 10.;
     [attText addAttribute:NSKernAttributeName value:@(charSpacing) range:NSMakeRange(0, text.length)];
     _lbl.attributedText = attText;
