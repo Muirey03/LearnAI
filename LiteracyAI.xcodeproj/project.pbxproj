@@ -41,6 +41,8 @@
 		65CFF051256D7C6A008ECA92 /* BinaryHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65CFF050256D7C6A008ECA92 /* BinaryHelper.mm */; };
 		65CFF055256D7F0F008ECA92 /* UIImage+Pixels.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65CFF054256D7F0F008ECA92 /* UIImage+Pixels.mm */; };
 		65CFF062256D876C008ECA92 /* HangmanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65CFF061256D876C008ECA92 /* HangmanViewController.m */; };
+		65EF432625D05423007C32F7 /* SpellingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65EF432525D05423007C32F7 /* SpellingViewController.m */; };
+		65EF432925D06024007C32F7 /* Animals in Resources */ = {isa = PBXBuildFile; fileRef = 65EF432825D06024007C32F7 /* Animals */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +107,9 @@
 		65CFF054256D7F0F008ECA92 /* UIImage+Pixels.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UIImage+Pixels.mm"; sourceTree = "<group>"; };
 		65CFF060256D876C008ECA92 /* HangmanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HangmanViewController.h; sourceTree = "<group>"; };
 		65CFF061256D876C008ECA92 /* HangmanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HangmanViewController.m; sourceTree = "<group>"; };
+		65EF432425D05422007C32F7 /* SpellingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpellingViewController.h; sourceTree = "<group>"; };
+		65EF432525D05423007C32F7 /* SpellingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpellingViewController.m; sourceTree = "<group>"; };
+		65EF432825D06024007C32F7 /* Animals */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Animals; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +152,7 @@
 		65CFEFE525571122008ECA92 /* LiteracyAI */ = {
 			isa = PBXGroup;
 			children = (
+				65EF432825D06024007C32F7 /* Animals */,
 				65078A5625A4EC2E001F26FE /* Vendor.db */,
 				65078A4625A106DC001F26FE /* numbersWeights.weights */,
 				65078A3F259FBA24001F26FE /* lettersWeights.weights */,
@@ -206,6 +212,8 @@
 				65078A5F25A643DD001F26FE /* CanvasButtonsView.m */,
 				65078A6225A8B564001F26FE /* IncorrectViewController.h */,
 				65078A6325A8B564001F26FE /* IncorrectViewController.m */,
+				65EF432425D05422007C32F7 /* SpellingViewController.h */,
+				65EF432525D05423007C32F7 /* SpellingViewController.m */,
 			);
 			path = LiteracyAI;
 			sourceTree = "<group>";
@@ -269,6 +277,7 @@
 				65CFEFF625571127008ECA92 /* LaunchScreen.storyboard in Resources */,
 				65CFEFF325571127008ECA92 /* Assets.xcassets in Resources */,
 				65230BBC259E24DF00DD33BE /* UserCollectionViewCell.xib in Resources */,
+				65EF432925D06024007C32F7 /* Animals in Resources */,
 				65078A5725A4EC2E001F26FE /* Vendor.db in Resources */,
 				65230BC2259E30A500DD33BE /* NewUserCollectionViewCell.xib in Resources */,
 				65CFEFF125571122008ECA92 /* Main.storyboard in Resources */,
@@ -296,6 +305,7 @@
 				65CFF062256D876C008ECA92 /* HangmanViewController.m in Sources */,
 				65CFF03525695961008ECA92 /* CanvasView.mm in Sources */,
 				65CFEFEE25571122008ECA92 /* HomeViewController.m in Sources */,
+				65EF432625D05423007C32F7 /* SpellingViewController.m in Sources */,
 				65078A4B25A39B77001F26FE /* CanvasContainerView.m in Sources */,
 				65230BA0259A4DD400DD33BE /* ConfettiViewController.m in Sources */,
 				65CFF04B256D786A008ECA92 /* NeuralNet.cpp in Sources */,
