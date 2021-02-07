@@ -6,6 +6,9 @@
 //
 
 #import "SpellingViewController.h"
+#import "Database.h"
+#import "ConfettiViewController.h"
+#import "IncorrectViewController.h"
 
 @interface SpellingViewController ()
 
@@ -21,23 +24,34 @@
 }
 
 - (void)fetchAnimals {
-    /*NSMutableArray* questions = [NSMutableArray array];
-    _questionIndex = 0;
-    [[Database vendorDB] executeSQL:@"SELECT * FROM Equations ORDER BY RANDOM()" withParameters:nil withResults:^(sqlite3_stmt* record, BOOL* stop) {
-        [questions addObject:@((const char*)sqlite3_column_text(record, 1))];
+    NSMutableArray* animals = [NSMutableArray array];
+    _animalIndex = 0;
+    [[Database vendorDB] executeSQL:@"SELECT Name FROM Animals ORDER BY RANDOM()" withParameters:nil withResults:^(sqlite3_stmt* record, BOOL* stop) {
+        [animals addObject:@((const char*)sqlite3_column_text(record, 0))];
     }];
-    _questions = questions;*/
+    _animals = animals;
 }
 
--(void)chooseAnimal {
-    //DEBUG
-    NSString* animal = @"Dog";
+- (void)chooseAnimal {
+    NSString* animal = _animals[_animalIndex++ % _animals.count];
+    _currentAnimal = animal;
     UIImage* animalImg = [self getAnimalNamed:animal];
     _animalImgView.image = animalImg;
 }
 
 - (void)canvasDidSubmitLetter:(char)c {
-    NSLog(@"submitted %c", c);
+    void(^completion)(void) = ^{
+        [self chooseAnimal];
+    };
+    if (tolower(c) == tolower([_currentAnimal characterAtIndex:0])) {
+        ConfettiViewController* confetti = [ConfettiViewController new];
+        [self presentViewController:confetti animated:NO completion:nil];
+        [confetti beginAnimationWithCompletion:completion];
+    } else {
+        IncorrectViewController* crossVC = [IncorrectViewController new];
+        crossVC.completion = completion;
+        [self presentViewController:crossVC animated:NO completion:nil];
+    }
 }
 
 - (UIImage*)getAnimalNamed:(NSString*)name {
